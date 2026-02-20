@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import { Link } from 'react-router-dom'
 import { FiArrowRight, FiClock } from 'react-icons/fi'
 import { BlogPost } from '../../types'
 
@@ -12,7 +13,7 @@ function formatDate(dateStr: string): string {
 }
 
 export function BlogCard({ post }: BlogCardProps) {
-  return (
+  const inner = (
     <motion.article
       whileHover={{ x: 4 }}
       transition={{ duration: 0.2 }}
@@ -46,9 +47,23 @@ export function BlogCard({ post }: BlogCardProps) {
         </div>
         <FiArrowRight
           size={18}
-          className="text-text-secondary group-hover:text-accent transition-colors shrink-0 mt-1"
+          className={`shrink-0 mt-1 transition-colors ${
+            post.hasContent
+              ? 'text-text-secondary group-hover:text-accent'
+              : 'text-border'
+          }`}
         />
       </div>
     </motion.article>
   )
+
+  if (post.hasContent) {
+    return (
+      <Link to={`/writing/${post.slug}`} className="block">
+        {inner}
+      </Link>
+    )
+  }
+
+  return inner
 }

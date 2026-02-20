@@ -21,11 +21,6 @@ export function Blog() {
           </div>
         </AnimatedSection>
 
-        <AnimatedSection delay={0.2}>
-          <p className="mt-6 text-text-secondary text-sm text-center">
-            More posts coming soon.
-          </p>
-        </AnimatedSection>
       </div>
     </section>
   )

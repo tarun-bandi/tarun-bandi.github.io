@@ -8,6 +8,7 @@ export interface Project {
   liveUrl?: string
   featured: boolean
   year: number
+  demoType?: 'shell' | 'tcp'
 }
 
 export interface BlogPost {
@@ -19,6 +20,7 @@ export interface BlogPost {
   tags: string[]
   slug: string
   url?: string
+  hasContent?: boolean
 }
 
 export interface Skill {

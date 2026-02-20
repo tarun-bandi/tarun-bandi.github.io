@@ -10,6 +10,7 @@ const navLinks: NavLink[] = [
   { label: 'Experience', to: 'experience' },
   { label: 'Projects', to: 'projects' },
   { label: 'Skills', to: 'skills' },
+  { label: 'Writing', to: 'blog' },
   { label: 'Contact', to: 'contact' },
 ]
 

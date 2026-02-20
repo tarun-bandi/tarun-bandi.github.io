@@ -2,6 +2,15 @@ import { Project } from '../types'
 
 export const projects: Project[] = [
   {
+    id: 'tsh',
+    title: 'Tiny Shell (tsh)',
+    description: 'A Unix shell in C with full job control — fg/bg, Ctrl-C/Ctrl-Z signal handling, pipelines. 15-213 Systems Programming at CMU. Try the live demo.',
+    techStack: ['C', 'POSIX', 'Signals', 'Job Control', 'x86-64'],
+    featured: true,
+    year: 2024,
+    demoType: 'shell',
+  },
+  {
     id: 'c-compiler',
     title: 'C Compiler',
     description: 'Full C compiler in OCaml targeting x86-64 — 7 phases from lexing to code gen, achieving 75% of GCC performance. 8,000 lines of code verified against 15,000+ programs.',
