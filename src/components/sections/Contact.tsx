@@ -41,7 +41,7 @@ export function Contact() {
 
           <AnimatedSection delay={0.2}>
             <a
-              href="mailto:tarun@example.com"
+              href="mailto:tbandi@andrew.cmu.edu"
               className="inline-flex items-center gap-3 px-6 py-3 bg-accent hover:bg-accent-hover text-white font-medium rounded-lg transition-colors text-sm mb-10"
             >
               <FiMail size={16} />

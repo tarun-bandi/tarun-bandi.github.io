@@ -31,3 +31,13 @@ export interface NavLink {
   label: string
   to: string
 }
+
+export interface Experience {
+  id: string
+  company: string
+  role: string
+  location: string
+  period: string
+  bullets: string[]
+  tags: string[]
+}

@@ -2,34 +2,26 @@ import { motion } from 'framer-motion'
 import {
   SiTypescript, SiJavascript, SiPython, SiGo, SiRust, SiPostgresql,
   SiReact, SiNextdotjs, SiNodedotjs, SiFastapi, SiTailwindcss, SiExpress,
-  SiGit, SiDocker, SiRedis, SiVite, SiGithubactions,
-  SiVercel, SiCloudflare,
+  SiGit, SiDocker, SiRedis, SiVite, SiGithubactions, SiVercel, SiCloudflare,
+  SiC, SiCplusplus, SiHtml5,
+  SiPytorch, SiTensorflow, SiNvidia, SiSpring,
+  SiJenkins, SiRedhatopenshift,
+  SiNumpy, SiPandas, SiScikitlearn,
 } from 'react-icons/si'
-import { FaAws } from 'react-icons/fa'
+import { FaAws, FaJava } from 'react-icons/fa'
 import { IconType } from 'react-icons'
 import { Skill } from '../../types'
 
 const iconMap: Record<string, IconType> = {
-  SiTypescript,
-  SiJavascript,
-  SiPython,
-  SiGo,
-  SiRust,
-  SiPostgresql,
-  SiReact,
-  SiNextdotjs,
-  SiNodedotjs,
-  SiFastapi,
-  SiTailwindcss,
-  SiExpress,
-  SiGit,
-  SiDocker,
-  SiRedis,
-  SiVite,
-  SiGithubactions,
-  SiVercel,
-  SiCloudflare,
+  SiTypescript, SiJavascript, SiPython, SiGo, SiRust, SiPostgresql,
+  SiReact, SiNextdotjs, SiNodedotjs, SiFastapi, SiTailwindcss, SiExpress,
+  SiGit, SiDocker, SiRedis, SiVite, SiGithubactions, SiVercel, SiCloudflare,
+  SiC, SiCplusplus, SiHtml5,
+  SiPytorch, SiTensorflow, SiNvidia, SiSpring,
+  SiJenkins, SiRedhatopenshift,
+  SiNumpy, SiPandas, SiScikitlearn,
   SiAmazonwebservices: FaAws,
+  SiJava: FaJava,
 }
 
 interface SkillBadgeProps {

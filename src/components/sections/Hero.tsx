@@ -66,7 +66,7 @@ export function Hero() {
             variants={itemVariants}
             className="text-xl sm:text-2xl text-text-secondary font-light max-w-xl"
           >
-            Software Engineer &mdash; building fast, reliable, and thoughtfully designed software.
+            CS @ Carnegie Mellon &mdash; systems, ML, and full-stack engineering.
           </motion.p>
 
           {/* Description */}
@@ -74,7 +74,8 @@ export function Hero() {
             variants={itemVariants}
             className="text-text-secondary text-base max-w-lg leading-relaxed"
           >
-            I work across the stack &mdash; from React frontends to distributed backends. I care about clean code, good UX, and shipping things that matter.
+            I&apos;ve written compilers, reimplemented TCP, trained RL agents, and interned at Meta and Citi.
+            I care about correctness, performance, and building things that work.
           </motion.p>
 
           {/* CTAs */}

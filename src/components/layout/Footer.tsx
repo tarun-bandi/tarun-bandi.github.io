@@ -4,7 +4,7 @@ const socialLinks = [
   { icon: FiGithub, href: 'https://github.com/tarun-bandi', label: 'GitHub' },
   { icon: FiLinkedin, href: 'https://linkedin.com/in/tarun-bandi', label: 'LinkedIn' },
   { icon: FiTwitter, href: 'https://twitter.com/tarun-bandi', label: 'Twitter' },
-  { icon: FiMail, href: 'mailto:tarun@example.com', label: 'Email' },
+  { icon: FiMail, href: 'mailto:tbandi@andrew.cmu.edu', label: 'Email' },
 ]
 
 export function Footer() {
