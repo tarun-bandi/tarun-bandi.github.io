@@ -1,6 +1,13 @@
 import './portfolio.css'
 
-const charts = [
+type Chart = {
+  file: string
+  title: string
+  summary: string
+  sources?: { label: string; url: string }[]
+}
+
+const charts: Chart[] = [
   {
     file: 'saints_historical_rushing.png',
     title: 'How low is 187 yards?',
@@ -17,6 +24,24 @@ const charts = [
     sources: [
       { label: 'NFL Week 10 statistics', url: 'https://static.clubs.nfl.com/image/upload/saints/tgee1alkvkqkpq1q3y7p.pdf' },
     ],
+  },
+  {
+    file: 'nfl_qb_experience.png',
+    title: 'NFL quarterback experience',
+    summary: 'Years of NFL experience for the 32 quarterbacks in the Week 5 QB Index, including the 2026 season.',
+    sources: [
+      { label: 'NFL Week 5 QB Index', url: 'https://www.nfl.com/news/nfl-qb-rankings-week-5-2026-nfl-season' },
+    ],
+  },
+  {
+    file: 'steelers-defense-depth-chart.webp',
+    title: 'Steelers Defense 2026 Depth Chart',
+    summary: 'An unofficial lineup concept showing a base 3–4 defense and a nickel package. An illustration, with roster details unverified.',
+  },
+  {
+    file: 'steelers-defense-harder-together.webp',
+    title: 'Steelers Defense: Harder Together',
+    summary: 'An unofficial poster imagining Pittsburgh’s 2026 defensive starters and reserves. An illustration, with roster and stat details unverified.',
   },
 ]
 
@@ -40,11 +65,13 @@ export default function App() {
               <div className="gallery-copy">
                 <h2><a href={url}>{chart.title} <span aria-hidden="true">↗</span></a></h2>
                 <p>{chart.summary}</p>
-                <ul className="gallery-sources" aria-label="Sources">
-                  {chart.sources.map((source) => (
-                    <li key={source.url}><a href={source.url}>{source.label} ↗</a></li>
-                  ))}
-                </ul>
+                {chart.sources && (
+                  <ul className="gallery-sources" aria-label="Sources">
+                    {chart.sources.map((source) => (
+                      <li key={source.url}><a href={source.url}>{source.label} ↗</a></li>
+                    ))}
+                  </ul>
+                )}
               </div>
             </article>
           )
