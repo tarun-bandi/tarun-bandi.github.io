@@ -9,6 +9,15 @@ type Chart = {
 
 const charts: Chart[] = [
   {
+    file: 'thank-goodness-for-tennessee.png',
+    title: 'Thank Goodness for Tennessee',
+    summary: 'From 2022 through September 13, 2026, Pittsburgh had three 300-yard passing games by a quarterback. Only Tennessee had fewer, with two.',
+    sources: [
+      { label: 'nflverse player stats', url: 'https://nflreadr.nflverse.com/reference/load_player_stats.html' },
+      { label: 'NFL Week 1 statistics', url: 'https://media.patriots.1rmg.com/wp-content/uploads/2026/03/15061502/NFL-Entire-Statistics-Week-1.pdf' },
+    ],
+  },
+  {
     file: 'saints_historical_rushing.png',
     title: 'How low is 187 yards?',
     summary: 'From 1999 to 2025, only three NFL team-seasons had a leading rusher below 187 yards through nine games.',
