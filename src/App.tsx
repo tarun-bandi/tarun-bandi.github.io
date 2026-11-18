@@ -4,10 +4,23 @@ type Chart = {
   file: string
   title: string
   summary: string
+  id?: string
+  sourceArchive?: string
   sources?: { label: string; url: string }[]
 }
 
 const charts: Chart[] = [
+  {
+    id: 'nfl-qb-late-game-records',
+    file: 'nfl-qb-late-game-records.png',
+    title: 'Down in the final eight',
+    summary: 'Career and 2026 records for established NFL starters when their team trailed in the final eight minutes of regulation. Bo Nix leads at 8–11 (42.1%) through Week 10 of 2026.',
+    sourceArchive: 'nfl-qb-late-game-records-source.zip',
+    sources: [
+      { label: 'nflverse play-by-play', url: 'https://github.com/nflverse/nflverse-data/releases/tag/pbp' },
+      { label: 'Week 11 depth charts', url: 'https://lineupfield.com/starting-quarterbacks/' },
+    ],
+  },
   {
     file: 'thank-goodness-for-tennessee.png',
     title: 'Thank Goodness for Tennessee',
@@ -67,13 +80,19 @@ export default function App() {
           const url = `${import.meta.env.BASE_URL}charts/${chart.file}`
 
           return (
-            <article className="gallery-card" key={chart.file}>
+            <article className="gallery-card" id={chart.id} key={chart.file}>
               <a className="gallery-preview" href={url} aria-label={`View full chart: ${chart.title}`}>
                 <img src={url} alt="" />
               </a>
               <div className="gallery-copy">
                 <h2><a href={url}>{chart.title} <span aria-hidden="true">↗</span></a></h2>
                 <p>{chart.summary}</p>
+                {chart.sourceArchive && (
+                  <ul className="gallery-sources gallery-downloads" aria-label="Downloads">
+                    <li><a href={url} download>Download PNG</a></li>
+                    <li><a href={`${import.meta.env.BASE_URL}charts/${chart.sourceArchive}`} download>Download code and data</a></li>
+                  </ul>
+                )}
                 {chart.sources && (
                   <ul className="gallery-sources" aria-label="Sources">
                     {chart.sources.map((source) => (
